@@ -86,4 +86,5 @@ rag_chain=({"context": retriever | format_docs, "question": RunnablePassthrough(
            | StrOutputParser()
            | clean_output)
 
-print(rag_chain.invoke("What is the price of Kaju Katli?"))
+def get_answer(question: str) -> str:
+    return rag_chain.invoke(question)
