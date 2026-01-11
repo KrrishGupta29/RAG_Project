@@ -65,6 +65,18 @@ rag/
 │   └── chat.js
 │
 ├── chroma_db/             # Persistent vector store
-
+└── README.md
 ```
-
+## ▶️ How to Run the Project
+1️⃣ Index Website Data (Run Once)
+```text
+python index_data.py
+```
+2️⃣ Start Web Application
+```text
+python app.py
+```
+3️⃣ Open in Browser
+```text
+http://127.0.0.1:5000
+```
