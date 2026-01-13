@@ -72,7 +72,7 @@ def clean_output(text):
     text = re.sub(r'\n.*', '', text)  # Single line
     if not text or text == "I don't know.":
         return text
-    return text.capitalize() + "."
+    return text[0].upper() + text[1:] + "."
 
 
 from langchain_core.runnables import RunnablePassthrough

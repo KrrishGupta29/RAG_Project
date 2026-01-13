@@ -1,45 +1,102 @@
-body {
-    font-family: Arial;
-    background: #f4f4f4;
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-.chat-container {
-    width: 60%;
-    margin: 40px auto;
-    background: white;
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e5e7eb;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 420px;
+    height: 650px;
+    background: #020617;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+.app-header {
     padding: 20px;
-    border-radius: 10px;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.app-header p {
+    font-size: 0.85rem;
+    color: #94a3b8;
 }
 
 #chat-box {
-    height: 400px;
+    flex: 1;
+    padding: 15px;
     overflow-y: auto;
-    border: 1px solid #ddd;
-    padding: 10px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    line-height: 1.4;
+    animation: fadeIn 0.3s ease;
 }
 
 .user {
-    text-align: right;
-    margin: 8px;
-    color: blue;
+    background: #2563eb;
+    align-self: flex-end;
 }
 
 .bot {
-    text-align: left;
-    margin: 8px;
-    color: green;
+    background: #1e293b;
+    align-self: flex-start;
 }
 
 .input-area {
     display: flex;
-    margin-top: 10px;
+    padding: 12px;
+    border-top: 1px solid #1e293b;
 }
 
 input {
     flex: 1;
-    padding: 10px;
+    padding: 10px 12px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    color: #e5e7eb;
+    border-radius: 8px;
+    outline: none;
 }
 
 button {
-    padding: 10px;
+    margin-left: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    font-weight: 500;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
 }

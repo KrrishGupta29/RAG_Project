@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAG Chat App</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>RAG Chat Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='chat.js') }}"></script>
 </head>
 <body>
 
-<div class="chat-container">
-    <h2>Context-Aware Chat Assistant</h2>
+<div class="app-container">
+    <header class="app-header">
+        <h1>🔍 RAG Chat Assistant</h1>
+        <p>Retrieval-Augmented Generation powered by Chroma + Hugging Face</p>
+    </header>
+
     <div id="chat-box"></div>
 
     <div class="input-area">
@@ -18,6 +24,5 @@
     </div>
 </div>
 
-<script src="/static/chat.js"></script>
 </body>
 </html>
